@@ -47,6 +47,8 @@ void displayMat(int rows, int cols, const double *vPtr)
 
 void matMult(int N, const double *matA, const double *matB, double *matC)
 {
+    printf("The size of double on the machine is : %ld", sizeof(double));
+
     if(dlayout == RowMaj)
     {
         int i;
