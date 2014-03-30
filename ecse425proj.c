@@ -49,13 +49,15 @@ void matMult(int N, const double *matA, const double *matB, double *matC)
 {
     if(dlayout == RowMaj)
     {
-    	for(int i=0; i < N*N; i++)
+        int i;
+    	for(i=0; i < N*N; i++)
     	{
     		int row = i/N;
     		int col = i%N;
     		int startingNum = row*N;
     		matC[i]=0;
-    		for (int j=0; j<N; j++)
+            int j;
+    		for (j=0; j<N; j++)
     		{
     			matC[i] += matA[startingNum+j]*matB[j*N+col];
     		}
@@ -69,12 +71,14 @@ void matVecMult(int N, const double *matA, const double *vecB, double *vecC)
     if(dlayout == RowMaj)
     {
     	//printf("%i", N);
-    	for(int i = 0; i < N; i++)
+        int i;
+    	for(i = 0; i < N; i++)
     	{
     		int row = i;
     		int startingNum = row*N;
     		vecC[i] = 0;
-    		for(int j=0; j < N; j++)
+            int j;
+    		for(j=0; j < N; j++)
     		{
     			vecC[i] += matA[startingNum+j]*vecB[j];
     		}
