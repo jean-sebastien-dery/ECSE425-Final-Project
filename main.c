@@ -170,6 +170,7 @@ int main(int argc, const char *argv[])
                     printf("\n");
                     displayMat(N,N,matC1);
                     printf("\n");
+		    displayMat(N,N,matC2);
                 }
 
                 // Free memory
