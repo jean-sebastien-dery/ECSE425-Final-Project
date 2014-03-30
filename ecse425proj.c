@@ -47,16 +47,26 @@ void displayMat(int rows, int cols, const double *vPtr)
 
 void matMult(int N, const double *matA, const double *matB, double *matC)
 {
+    printf("The size of double on the machine is : %ld", sizeof(double));
+
     if(dlayout == RowMaj)
     {
+<<<<<<< HEAD
 	int i;
+=======
+        int i;
+>>>>>>> f4136b204b8693a5cb4a17f148432cfe85cd9423
     	for(i=0; i < N*N; i++)
     	{
     		int row = i/N;
     		int col = i%N;
     		int startingNum = row*N;
     		matC[i]=0;
+<<<<<<< HEAD
 		int j;
+=======
+            int j;
+>>>>>>> f4136b204b8693a5cb4a17f148432cfe85cd9423
     		for (j=0; j<N; j++)
     		{
     			matC[i] += matA[startingNum+j]*matB[j*N+col];
@@ -71,13 +81,21 @@ void matVecMult(int N, const double *matA, const double *vecB, double *vecC)
     if(dlayout == RowMaj)
     {
     	//printf("%i", N);
+<<<<<<< HEAD
     	int i;
+=======
+        int i;
+>>>>>>> f4136b204b8693a5cb4a17f148432cfe85cd9423
     	for(i = 0; i < N; i++)
     	{
     		int row = i;
     		int startingNum = row*N;
     		vecC[i] = 0;
+<<<<<<< HEAD
 		int j;
+=======
+            int j;
+>>>>>>> f4136b204b8693a5cb4a17f148432cfe85cd9423
     		for(j=0; j < N; j++)
     		{
     			vecC[i] += matA[startingNum+j]*vecB[j];

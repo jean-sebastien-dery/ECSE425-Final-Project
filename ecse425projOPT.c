@@ -1,17 +1,25 @@
 #include "ecse425projOPT.h"
 #include "ecse425proj.h"
 
+<<<<<<< HEAD
 #define BLOCK_SIZE 64
 #define NUMBER_OF_DOULBES_IN_ONE_BLOCK (BLOCK_SIZE/sizeof(double))
 
 void matVecMult_opt(int N, const double *matA, const double *vecB, double *vecC) 
 {
     // Code in your optimized implementation here
+=======
+#define L1D_BLOCK_SIZE 64; // Defines the block size of the L1D cache used by benchmark.
+
+void matVecMult_opt(int N, const double *matA, const double *vecB, double *vecC) 
+{
+>>>>>>> f4136b204b8693a5cb4a17f148432cfe85cd9423
     
 }
 
 void matMult_opt(int N, const double *matA, const double *matB, double *matC) 
 {
+<<<<<<< HEAD
     int block_i, block_j, block_k;
     int i, j, k;
     int addressMatA;
@@ -40,5 +48,8 @@ void matMult_opt(int N, const double *matA, const double *matB, double *matC)
 	}
     }
     // Code in your optimized implementation here
+=======
+    
+>>>>>>> f4136b204b8693a5cb4a17f148432cfe85cd9423
 }
 
