@@ -151,7 +151,7 @@ int main(int argc, const char *argv[])
                 if(execOPT) {
                   // Perform optimized matA x matB = matC2
                   tic = clock();
-                  matMult_opt(N,matA,matB,matC2);
+                  //matMult_opt(N,matA,matB,matC2);
                   toc = clock();
                   tm = (double)(toc - tic) / CLOCKS_PER_SEC;
                   printf("Elapsed time for optimized mat-mat mult.: %f seconds\n",tm);
